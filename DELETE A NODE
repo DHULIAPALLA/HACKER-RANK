@@ -1,0 +1,12 @@
+def deleteNode(llist, position):
+    temp=llist
+    if position<0:
+        return False
+    elif position==0:
+        llist=llist.next
+        return llist
+    else:
+        for i in range(position-1):
+            temp=temp.next
+        temp.next=temp.next.next
+    return llist
