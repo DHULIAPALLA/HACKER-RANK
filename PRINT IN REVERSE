@@ -1,0 +1,13 @@
+def reversePrint(llist):
+    temp=llist
+    reverse_list=[]
+    if llist is None:
+        return None
+    else:
+        while temp:
+            reverse_list.append(temp.data)
+            temp=temp.next
+        reverse_list.reverse()
+        for data in reverse_list:
+            print(data)
+    
