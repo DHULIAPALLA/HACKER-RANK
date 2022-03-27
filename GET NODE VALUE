@@ -1,0 +1,14 @@
+def getNode(llist, positionFromTail):
+    pre=None
+    temp=llist
+    if llist is None:
+        return False
+    else:
+        while temp is not None:
+            temp=llist.next
+            llist.next=pre
+            pre=llist
+            llist=temp
+        for i in range(positionFromTail):
+            pre=pre.next
+        return pre.data
