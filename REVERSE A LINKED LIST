@@ -1,0 +1,12 @@
+def reverse(llist):
+    prev=llist
+    llist=llist.next
+    prev.next=None
+    while llist.next!=None:
+        temp=llist.next
+        llist.next=prev
+        prev=llist
+        llist=temp
+    llist.next=prev
+    return llist
+    
